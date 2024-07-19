@@ -1,13 +1,12 @@
 void main() {
-  print('Hello World!');
+  var x = 10;
+  print(x);
+  print('x = $x');
+  print('x = ${x + 5}');
 
-  print("Katie's Lessons");
-
-  print('''
-        Katie
-        Schwerer
-        ''');
-
-  print(3+5);
-  print('3+5 = ${3 + 5}');
+  final int t = 10;
+  const double y = 10.6;
+  String str = "Katie";
+  bool p = false;
+  x = 5;
 }
