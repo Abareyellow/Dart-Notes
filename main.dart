@@ -1,26 +1,18 @@
 void main() {
-      var x = 5;
-      var y = 3;
-      var op = '*';
+      var i = 0;
+      while(i < 11) {
+            print("$i - Hi!");
+         i++;   
+      }
 
-      switch (op) {
-            case '+':
-                  print('x + y = ${x + y}');
-                  break;
-            case '-':
-                  print('x - y = ${x - y}');
-                  break;
-            case '*':
-                  print('x * y = ${x * y}');
-                  break;
-            case '/':
-                  print('x / y = ${x / y}');
-                  break;
-            case '%':
-                  print('x % y = ${x % y}');
-                  break;
-            default:
-                  print("Not Valid!");
-                  break;
+      i = 0;
+
+      do {
+            print('$i-Hi');
+            i++;
+      } while(i < 11);
+
+      for(var i = 0; i < 11; i++){
+            print('$i-Hi');
       }
 }
