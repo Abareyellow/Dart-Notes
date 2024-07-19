@@ -1,13 +1,26 @@
 void main() {
-      var a = 4;
-      var b = 3;
-      var smallerNum = a < b ? a : b;
+      var x = 5;
+      var y = 3;
+      var op = '*';
 
-      
-      //a < b ? print('$a is smaller') : print('$b is smaller');
-      print(smallerNum);
-
-      var name;
-      var v1 = name ?? 'Katie';
-      print(v1);
+      switch (op) {
+            case '+':
+                  print('x + y = ${x + y}');
+                  break;
+            case '-':
+                  print('x - y = ${x - y}');
+                  break;
+            case '*':
+                  print('x * y = ${x * y}');
+                  break;
+            case '/':
+                  print('x / y = ${x / y}');
+                  break;
+            case '%':
+                  print('x % y = ${x % y}');
+                  break;
+            default:
+                  print("Not Valid!");
+                  break;
+      }
 }
