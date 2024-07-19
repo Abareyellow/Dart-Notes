@@ -1,12 +1,17 @@
 void main() {
   var x = 10;
-  print(x);
   print('x = $x');
-  print('x = ${x + 5}');
 
-  final int t = 10;
-  const double y = 10.6;
-  String str = "Katie";
-  bool p = false;
-  x = 5;
+  // var y = x.toDouble();
+  var y = x.toString();
+      
+  print('x = $x');
+  print(y + ' is  the value');
+  print(x.runtimeType);
+  print(y.runtimeType);
+
+  var num1 = '22';
+  var num2 = num.parse(num1);
+
+  print(num2.runtimeType);
 }
