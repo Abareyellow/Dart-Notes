@@ -1,17 +1,17 @@
-import 'dart:math';
-
 void main() {
-  var degree = Random().nextInt(100);
-  print('Degree = $degree');
-  if (degree >= 90) {
-    print("You got an A");
-  } else if (degree >= 80) {
-    print("You got a B");
-  } else if (degree >= 70) {
-    print("You got a C");
-  } else if (degree >= 60) {
-    print("You got a D");
-  } else {
-    print("You got a F");
-  }
+      var x = - 4;
+      print('x.isOdd = ${x.isOdd}');
+      print('x.isEven = ${x.isEven}');
+      print('x.isFinite = ${x.isFinite}');
+      print('x.isInfinite = ${x.isInfinite}');
+      print('x.isNaN = ${x.isNaN}');
+      print('x.isNegative = ${x.isNegative}');
+      print('x.abs() = ${x.abs()}');
+
+      var y = -8.5;
+      print('y.round() = ${y.round()}');
+      print('y.floor() = ${y.floor()}');
+      print('y.truncate() = ${y.round()}');
+      print('y.ceil() = ${y.ceil()}');
+      print('y.remainder(x) = ${y.remainder(x)}');
 }
