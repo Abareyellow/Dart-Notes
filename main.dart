@@ -1,17 +1,10 @@
-void main() {
-      var x = - 4;
-      print('x.isOdd = ${x.isOdd}');
-      print('x.isEven = ${x.isEven}');
-      print('x.isFinite = ${x.isFinite}');
-      print('x.isInfinite = ${x.isInfinite}');
-      print('x.isNaN = ${x.isNaN}');
-      print('x.isNegative = ${x.isNegative}');
-      print('x.abs() = ${x.abs()}');
+import 'dart:io';
 
-      var y = -8.5;
-      print('y.round() = ${y.round()}');
-      print('y.floor() = ${y.floor()}');
-      print('y.truncate() = ${y.round()}');
-      print('y.ceil() = ${y.ceil()}');
-      print('y.remainder(x) = ${y.remainder(x)}');
+void main() {
+      print('Enter your Birth Year: ');
+      var birthYear = num.parse(stdin.readLineSync()!);
+      var age = DateTime.now().year - birthYear;
+      print('Your Age is $age years old');
+
+      //Exception
 }
