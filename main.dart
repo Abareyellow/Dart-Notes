@@ -1,7 +1,20 @@
 void main() {
-      var a1 = [1, 2.5, 3.2, 4, 5, 6];
-      print('a1 = $a1');
+      //var h1 = Human();
+      Human h1 = Human();
+      h1.name = "Katie";
+      h1.age = 24;
+      h1.height = 100.5;
 
-      var b1 = a1.where((element) => element < 5).toList();
-      print('b1 = $b1');
+      print(h1.name);
+}
+
+class Human {
+      var name;
+      var age;
+      var height;
+
+      void fun() {
+            age += 5;
+            print('age = $age');
+      }
 }
