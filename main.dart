@@ -1,23 +1,33 @@
 import 'dart:io';
 
 void main() {
-      var a = [2, 4, 6];
+      var x = {4, 5, 6, 7, 8, 9};
+      Set y = {4, 5, 6, 7, 8, 9};
 
-      for (var i = 0; i < a.length; i++) {
-          print(a[i]);  
-      }
+      x.forEach((element) {
+            print(element);   
+      });
 
-      var b = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+      print(y);
+      List z = x.toList();
+      print(z);
 
-      for (var i = 0; i < b.length; i++) {
-            for (var j = 0; j < b[i].length; j++) {
-                  print(b[i][j]);
-            }
-      }
+      x.add(10);
+      print(x);
+      x.addAll({2, 3});
+      print(x);
+      print(x.length);
+      print(x.elementAt(0));
+      print(x.contains(5));
+      x.remove(5);
+      print(x);
+      x.clear();
+      print(x);
 
-      for (var item in b) {
-            for (var i in item) {
-                  print(i);
-            }
-      }
+      var a = {4, 5, 6, 7};
+      var b = {6, 7, 8, 9};
+      print(a.intersection(b));
+      print(a.union(b));
+      print(a.difference(b));
+      print(y.difference(a));
 }
