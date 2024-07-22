@@ -1,23 +1,18 @@
 void main() {
       //var h1 = Human();
       Human h1 = Human();
-      Human.values("Katie", 24, 100.5);
+      h1.setAge(24);
+      print(h1.getAge());
 }
 
 class Human {
-      var name, age, height;
+      num age = 0; 
 
-      static void values(String name, int age, double height) {
-            name = name;
-            age = age;
-            height = height;
-            print('Name = $name');
-            print('Age = $age');
-            print('Height = $height');
+      void setAge(p_age) {
+            age = p_age;
       }
 
-      void fun() {
-            age += 5;
-            print('New Age = $age');
+      dynamic getAge() {
+            return age;
       }
 }
