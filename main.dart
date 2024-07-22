@@ -1,12 +1,15 @@
 void main() {
-      sum(3);
-      sum2(3, y:4);
+      var a = [2, 2.3, 'Ali', true];
+      var b = [2, 2.3, 'Ali', true];
+
+      fun(a);
+      fun(b);
 }
-//Default
-void sum(x, [y=0]) {
-      print('Sum = ${x + y}');
-}
-//Optional
-void sum2(x, {y = 0}) {
-      print('Sum = ${x + y}');
+
+void fun(List<dynamic> list) {
+      for (var i = 0; i < list.length; i++) {
+            print('value ${i + 1} = ${list[i]}');
+      }
+
+      print("-----------------------------");
 }
