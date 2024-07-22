@@ -1,12 +1,17 @@
 void main() {
-      var x = fun(3);
-      print(x);
+      info();
 }
 
-int fun(n) {
-      if (n != 0) {
-            return n + fun(n - 1);
-      } else {
-            return 0;
-      } 
+void info() {
+      try {
+            for (var i = 0; i <= 10; i++) {
+                  if (i == 5) {
+                        throw FormatException;
+                  }
+
+                  print('i=$i');
+            }
+      } catch (e) {
+            print(e);
+      }
 }
