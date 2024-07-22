@@ -1,15 +1,12 @@
 void main() {
-      var a = [2, 2.3, 'Ali', true];
-      var b = [2, 2.3, 'Ali', true];
-
-      fun(a);
-      fun(b);
+      var x = fun(3);
+      print(x);
 }
 
-void fun(List<dynamic> list) {
-      for (var i = 0; i < list.length; i++) {
-            print('value ${i + 1} = ${list[i]}');
-      }
-
-      print("-----------------------------");
+int fun(n) {
+      if (n != 0) {
+            return n + fun(n - 1);
+      } else {
+            return 0;
+      } 
 }
