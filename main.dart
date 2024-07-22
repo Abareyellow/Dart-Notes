@@ -1,18 +1,21 @@
-void main() {
-      //var h1 = Human();
-      Human h1 = Human();
-      h1.setAge(24);
-      print(h1.getAge());
+class A {
+      A(msg) {
+            print('Message 1 = $msg');
+      }
 }
 
-class Human {
-      num age = 0; 
-
-      void setAge(p_age) {
-            age = p_age;
+class B extends A {
+      B(msg) :super('Hello') {
+            print('Message 2 = $msg');
       }
+}
 
-      dynamic getAge() {
-            return age;
+class C extends B {
+      C(String str) :super('Hello') {
+            print('Message 3 = $str');
       }
+}
+
+void main() {
+      var c = C("Hello");
 }
