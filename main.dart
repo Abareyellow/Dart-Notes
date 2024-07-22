@@ -1,14 +1,12 @@
-import 'dart:io';
-
 void main() {
-      fun("Hello");
-      print(fun2());
+      sum(3);
+      sum2(3, y:4);
 }
-
-fun(String message) {
-      print("message = $message");
+//Default
+void sum(x, [y=0]) {
+      print('Sum = ${x + y}');
 }
-
-int fun2() {
-      return 3 + 7;
+//Optional
+void sum2(x, {y = 0}) {
+      print('Sum = ${x + y}');
 }
