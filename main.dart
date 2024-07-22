@@ -1,18 +1,9 @@
 import 'dart:io';
 
 void main() {
-      //Exception
-      do {
-            try {
-                  print('Enter your Birth Year: ');
-                  var birthYear = num.parse(stdin.readLineSync()!);
-                  var age = DateTime.now().year - birthYear;
-                  print('Your Age is $age years old');
-                  break;
-            } on FormatException {
-                  print('Invalid Value');
-            } catch (e) {
-                  print('Error Message: $e');
-            }
-      } while (true);
+      List<int> li = [2, 4, 6, 8];
+      List<String> li2 = ['a', 'b'];
+      List<double> li3 = [3.2, 2.2];
+      List<dynamic> li4 = [2, 4.3, 'a', true];
+      print(li);
 }
