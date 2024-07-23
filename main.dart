@@ -1,21 +1,22 @@
-class A {
-      A(msg) {
-            print('Message 1 = $msg');
-      }
+abstract class A {
+      void info();
 }
 
-class B extends A {
-      B(msg) :super('Hello') {
-            print('Message 2 = $msg');
-      }
+abstract class B extends A {
+      void info2();
 }
+      
 
-class C extends B {
-      C(String str) :super('Hello') {
-            print('Message 3 = $str');
-      }
+class C implements B, A {
+      @override
+      void info() => print("Hi");
+
+      @override
+      void info2() => print("Hello");
 }
 
 void main() {
-      var c = C("Hello");
+      var c = C();
+      c.info();
+      c.info2();
 }
