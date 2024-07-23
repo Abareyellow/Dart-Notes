@@ -1,11 +1,10 @@
 void main() {
-      var human1 = Human();
-
-      human1('Katie', 24);
+      print('2'.parseInt() + 5);
 }
 
-class Human {
-      void call(String name, int age) {
-            print('Name = $name || Age = $age');
+extension NumberParsing on String {
+      parseInt() {
+            return int.parse(this);
       }
 }
+
