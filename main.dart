@@ -1,18 +1,26 @@
 void main() {
-      var a = A<int, double>();
-      a.x = 10;
-      a.y = 3.4;
-      print(a.x);
-      print(a.y);
+      var c1 = myClass(4)..get();
+      var c2 = myClass(20)..get();
+      var c3 = myClass();
 
-      var b = A<String, bool>();
-      b.x = "Katie";
-      b.y = true;
-      print(b.x);
-      print(b.y);
+      //c3.add(c1, c2);
+      c3 = c1 + c2; // c1.operator+(c2)
+      c3.get();
 }
 
-class A <T, E> {
-      late T x;
-      late E y;
+class myClass {
+      int num;
+      myClass([this.num = 0]);
+
+      void get() => print('Number = ${this.num}');
+
+      void add(myClass c1, myClass c2) {
+            this.num = c1.num + c2.num;
+      }
+
+      myClass operator+(myClass c2) {
+            var c3 = myClass();
+            c3.num = this.num + c2.num;
+            return c3;
+      }
 }
