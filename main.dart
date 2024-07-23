@@ -1,26 +1,43 @@
 void main() {
-      var c1 = myClass(4)..get();
-      var c2 = myClass(20)..get();
-      var c3 = myClass();
+      //var s = Shape();
+      var c = Circle();
+      var r = Rectangle();
+      var sq = Square();
 
-      //c3.add(c1, c2);
-      c3 = c1 + c2; // c1.operator+(c2)
-      c3.get();
+      var a = A();
+      a.fun(c);
+      //s.info();
+      c.info();
+      r.info();
+      sq.info();
+
+      List<Shape> data = [c, r, sq];
+      for (var item in data) {
+            item.info();
+      }
 }
 
-class myClass {
-      int num;
-      myClass([this.num = 0]);
-
-      void get() => print('Number = ${this.num}');
-
-      void add(myClass c1, myClass c2) {
-            this.num = c1.num + c2.num;
+class A {
+      void fun(Shape q) {
+            q.info();
       }
+}
 
-      myClass operator+(myClass c2) {
-            var c3 = myClass();
-            c3.num = this.num + c2.num;
-            return c3;
-      }
+abstract class Shape {
+      void info() => print('Shape');
+}
+
+class Circle extends Shape {
+      @override
+      void info() => print('Circle');
+}
+
+class Rectangle extends Shape {
+      @override
+      void info() => print('Rectangle');
+}
+
+class Square extends Shape {
+      @override
+      void info() => print('Square');
 }
