@@ -1,27 +1,24 @@
-mixin class A {
-      void info() {
-            print("Hello");
-      }
-}
-
-mixin class B {
-      void info2() {
-            print("Hello - 2");
-      }
-}
-      
-abstract class C {
-      void info3();
-}
-
-class D extends C with A, B {
-      @override
-      void info3() => print("Hello - 3");
-} 
-
 void main() {
-      var d = D();
-      d.info();
-      d.info2();
-      d.info3();
+      print(info(Color.red));
+      print(Color.values[1]);
+      //print(Color2.red);
+}
+
+enum Color { red, blue, black }
+
+/*class Color2 {
+      static const red = "red";
+      static const blue = "blue";
+      static const black = "black";
+}*/
+
+String info(Color s) {
+      switch(s) {
+            case Color.red:
+                  return 'red';
+            case Color.blue:
+                  return 'blue';
+            case Color.black:
+                  return 'black';
+      }
 }
