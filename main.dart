@@ -1,13 +1,11 @@
 void main() {
-      Function fun() {
-            var message;
-            Function say = (String msg) {
-                  message = msg;
-                  print(message);
-            };
-            return say;
-      };
+      var human1 = Human();
 
-      var f = fun();
-      f('Hi!');
+      human1('Katie', 24);
+}
+
+class Human {
+      void call(String name, int age) {
+            print('Name = $name || Age = $age');
+      }
 }
