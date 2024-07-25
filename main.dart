@@ -1,7 +1,8 @@
 void main() {
-  var name = "Katie";
-      print(name);
+      var firstName = 'Katie';
       String lastName = "Schwerer";
-      print(lastName);
-      //lastName = 2;
+      String fullName = "$firstName $lastName";
+
+      print(fullName.length);
+      print(fullName.isEmpty);
 }
