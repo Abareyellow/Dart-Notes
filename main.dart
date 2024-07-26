@@ -1,9 +1,11 @@
 void main() {
-     var cars = {"Tesla": "Electric", "Toyota" : "Gasoline"};
-      print(cars);
-      var fruits = new Map();
-      fruits["Apple"] = "Red";
-      print(fruits);
-      var userAges = {"Jeff" : 22, "George" : 31};
-      print(userAges["George"]);
+     var list1 = ["A", "B", "C"];
+      print(list1);
+      print(list1[1]);
+      list1.add("D");
+      print(list1);
+      print(list1.first);
+      print(list1.last);
+      print(list1.isEmpty);
+      print(list1.length);
 }
