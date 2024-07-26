@@ -1,8 +1,13 @@
 void main() {
-      var firstName = 'Katie';
-      String lastName = "Schwerer";
-      String fullName = "$firstName $lastName";
+      printToConsole("Katie", string2: "Schwerer");
+      print(multiply(2, 4));
+}
 
-      print(fullName.length);
-      print(fullName.isEmpty);
+void printToConsole(String name, {String? string2}) {
+      print(name);
+      print(string2);
+}
+
+int multiply(int num1, int num2) {
+      return num1 * num2;
 }
