@@ -1,13 +1,28 @@
 void main() {
-      printToConsole("Katie", string2: "Schwerer");
-      print(multiply(2, 4));
+     Vehicle car1 = new Vehicle("V6");
+      Vehicle car2 = new Vehicle("V12");
+      SuperCar car3 = new SuperCar("V16");
+      car1.display();
+      car2.display();
+      car3.display();
 }
 
-void printToConsole(String name, {String? string2}) {
-      print(name);
-      print(string2);
+class Vehicle {
+      String engine;
+
+      /*Car(String eng) {
+            this.engine = eng;
+      }*/
+
+      Vehicle(this.engine) {
+            
+      }
+
+      void display() {
+            print(engine);
+      }
 }
 
-int multiply(int num1, int num2) {
-      return num1 * num2;
+class SuperCar extends Vehicle {
+      SuperCar(String engine) : super(engine);
 }
